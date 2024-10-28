@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatTKG</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="img/apple-touch-icon.png"
+    />
+    <link rel="icon" href="img/android-chrome-512x512.png" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/logo.png" alt="Logo" class="logo" />
+      <h1 class="title">ChatTKG</h1>
+    </div>
+    <div class="chat-container">
+      <ul id="messages"></ul>
+      <div class="input-area">
+        <input id="input" placeholder="メッセージを入力..." />
+        <button id="sendBtn">送信</button>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
