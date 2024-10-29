@@ -15,6 +15,16 @@
     <link rel="icon" href="img/android-chrome-512x512.png" />
   </head>
   <body>
+    <!-- ローディング画面 -->
+    <div id="splash">
+      <div id="splash_logo">
+        <img src="img/logo_loading.png" alt="" class="fadeUp" />
+      </div>
+      <!--画像部分は適宜差し換えてください-->
+      <!--/splash-->
+    </div>
+    <!-- !ローディング画面 -->
+
     <div class="header">
       <img src="img/logo.png" alt="Logo" class="logo" />
       <h1 class="title">ChatTKG</h1>
@@ -26,6 +36,8 @@
         <button id="sendBtn">送信</button>
       </div>
     </div>
+    <script src="js/loading.js"></script>
+    <script type="module" src="js/autoReplies.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
