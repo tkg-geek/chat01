@@ -3,12 +3,12 @@ import { autoReplies } from './autoReplies.js'; // autoReplies.jsをインポー
 
 // Firebaseの初期化
 const firebaseConfig = {
-  apiKey: "AIzaSyDjbK92rrncQ1q4-PGDREwC_Okf7CHZK3s",
-  authDomain: "chattkg-f6d60.firebaseapp.com",
-  projectId: "chattkg-f6d60",
-  storageBucket: "chattkg-f6d60.appspot.com",
-  messagingSenderId: "830841509270",
-  appId: "1:830841509270:web:29a4bce274a8db7cba39b7",
+  apiKey: "***************",
+  authDomain: "***************",
+  projectId: "***************",
+  storageBucket: "***************",
+  messagingSenderId: "***************",
+  appId: "***************",
 };
 
 // Firebaseの初期化処理
