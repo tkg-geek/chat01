@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
+  apiKey: "***************",
+  authDomain: "***************",
+  projectId: "***************",
+  storageBucket: "***************",
+  messagingSenderId: "***************",
+  appId: "***************",
 };
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import {
