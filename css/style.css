@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 10px;
     overflow: hidden;
 }
 
@@ -19,6 +18,12 @@ body {
     align-items: center;
     margin: 10px 0;
     gap: 10px;
+}
+
+@media screen and (max-width: 670px) {
+    .header {
+        margin: 5px 0;
+    }
 }
 
 .logo {
@@ -33,7 +38,7 @@ body {
 }
 
 .chat-container {
-    width: 95%;
+    width: 92%;
     max-width: 400px;
     height: calc(100vh - 150px);
     background-color: white;
@@ -83,43 +88,107 @@ button:hover {
     background-color: #0056b3;
 }
 
+
+/* ------------------------------
+ メッセージの区別
+------------------------------ */
+.auto-reply {
+    align-self: flex-start;
+    /* 自動返信メッセージを左寄せ */
+}
+
+.user-message {
+    align-self: flex-end;
+    /* ユーザーのメッセージを右寄せ */
+}
+
+
 /* ------------------------------
  メッセージ表示
 ------------------------------ */
 #messages {
     list-style-type: none;
-    /* リストマーカーを消す */
     padding: 20px;
-    /* パディングをリセット */
 }
 
 #messages li {
     position: relative;
     border-radius: 10px;
-    /* 吹き出しの角を丸くする */
     padding: 10px 15px;
-    /* 吹き出しの内側のパディング */
     width: fit-content;
-    /* 内容に応じて幅を調整 */
     max-width: 80%;
-    /* 吹き出しの最大幅を設定 */
     margin: 5px 0;
     background-color: #dcf8c6;
-    align-self: flex-end;
+    white-space: pre-line;
+    /* 改行を有効にする */
 }
 
-#messages li:after {
+.user-message:after {
     content: '';
-    /* 吹き出しの三角形を作るためのコンテンツ */
     position: absolute;
     top: 50%;
     right: -10px;
-    /* 吹き出しの右側に三角形を配置 */
     margin-top: -5px;
-    /* 垂直中央にするための調整 */
     border-width: 5px;
-    /* 三角形のサイズ */
     border-style: solid;
-    border-color: transparent transparent transparent #e0f7fa;
-    /* 三角形の色 */
+    border-color: transparent transparent transparent #dcf8c6;
+}
+
+.auto-reply:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    /* 矢印を左に移動 */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #dcf8c6 transparent transparent;
+}
+
+/* ------------------------------
+ ローディング画面
+------------------------------ */
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
